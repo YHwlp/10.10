@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		a{
+			text-decoration: none;
+		}
+		#a{
+			border: 1px solid;
+			padding: 10px;
+			border-radius: 10px;
+			width: 70px;
+			text-align: center;
+			cursor: pointer;
+			float: left;
+		}
+		#b{
+			border-radius: 10px;
+			border: 1px solid;
+			text-align: center;
+			width: 50px;
+			display: none;
+			float: left;
+		}
+		#c{
+			width: 160px;
+			text-align: center;
+			border: 1px solid;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		#d{
+			width: 500px;
+			height: 500px;
+			text-align: center;
+			border: 1px solid;
+			border-radius: 20px;
+			margin: 0 auto;
+			display: none;
+		}
+		#x{
+			cursor: pointer;
+			height: 200px;
+			line-height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="a">按钮</div>
+	<div id="b">信息</div>
+	<div id="c">
+		<a href="#d">登录</a>
+	</div>
+	<div id="d">
+		<div id="x">x</div>
+		<p>我是一堆无用的信息</p>
+	</div>
+	<script>
+		var a=document.getElementById('a');
+		var b=document.getElementById('b');
+		var c=document.getElementById('c');
+		var d=document.getElementById('d');
+		var x=document.getElementById('x');
+		a.onmouseover=function () {
+			b.style.display='block';
+		}
+		a.onmouseout=function () {
+			b.style.display='none';
+		}
+		c.onclick=function () {
+			d.style.display='block';
+		}
+		x.onclick=function () {
+			d.style.display='none';
+		}
+	</script>
+</body>
+</html>
